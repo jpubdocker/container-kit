@@ -36,18 +36,18 @@ jobs:
           context: ./containers/simple-nginx-proxy
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ${{ env.CONTAINER_REGISTRY }}/jpubdocker/simple-nginx-proxy:${{ env.IMAGE_VERSION }}
+          tags: ${{ env.CONTAINER_REGISTRY }}/jpubdocker/simple-nginx-proxy:v0.1.0
       - name: Build and push debug 
         uses: docker/build-push-action@v4
         with:
           context: ./containers/debug
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ${{ env.CONTAINER_REGISTRY }}/jpubdocker/debug:${{ env.IMAGE_VERSION }}
+          tags: ${{ env.CONTAINER_REGISTRY }}/jpubdocker/debug:v0.1.0
       - name: Build and push time-limit-job 
         uses: docker/build-push-action@v4
         with:
           context: ./containers/time-limit-job
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ${{ env.CONTAINER_REGISTRY }}/jpubdocker/time-limit-job:${{ env.IMAGE_VERSION }}
+          tags: ${{ env.CONTAINER_REGISTRY }}/jpubdocker/time-limit-job:v0.1.0
